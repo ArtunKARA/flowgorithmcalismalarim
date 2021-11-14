@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-28 09:10:14 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDg6NTI6MjAgw5ZTOzMwMDY="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDk6MTA6MTQgw5ZTOzI7MzExMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="saat, dakika, a&#231;&#305;" type="Integer" array="False" size=""/>
+            <output expression="&quot;saat&quot;" newline="True"/>
+            <input variable="saat"/>
+            <if expression="saat&gt;12">
+                <then>
+                    <assign variable="saat" expression="saat-12"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;dakika&quot;" newline="True"/>
+            <input variable="dakika"/>
+            <assign variable="a&#231;&#305;" expression="((((saat*30)+(dakika*0.5))-(dakika*6))^2)^0.5"/>
+            <output expression="&quot;akrep yelkoavan aras&#305; a&#231;&#305; &quot;&amp;a&#231;&#305;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

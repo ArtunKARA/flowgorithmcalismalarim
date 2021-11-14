@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-14 03:49:21 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMTQ7MDI6MDI6MTYgw5ZTOzI5OTU="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMTQ7MDM6NDk6MjEgw5ZTOzE2OzMxNjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#252;say&#305;, saya&#231;, gsay&#305;" type="Integer" array="False" size=""/>
+            <assign variable="&#252;say&#305;" expression="random(101)"/>
+            <assign variable="saya&#231;" expression="1"/>
+            <output expression="&quot;0-100 aras&#305; rasgele &#252;retilen say&#305;y&#305; tahmin edin&quot;" newline="True"/>
+            <input variable="gsay&#305;"/>
+            <if expression="&#252;say&#305;=gsay&#305;">
+                <then/>
+                <else>
+                    <do expression="&#252;say&#305;!=gsay&#305;">
+                        <assign variable="saya&#231;" expression="saya&#231;+1"/>
+                        <if expression="&#252;say&#305;&lt;gsay&#305;">
+                            <then>
+                                <output expression="&quot;girilen say&#305; &#252;retilenden b&#252;y&#252;k&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;girilen say&#305; &#252;retilenden k&#252;&#231;&#252;k&quot;" newline="True"/>
+                            </else>
+                        </if>
+                        <input variable="gsay&#305;"/>
+                    </do>
+                </else>
+            </if>
+            <output expression="&quot;Tahmin edilen say&#305;y&#305; &quot;&amp;saya&#231;&amp;&quot;. tahminde bildiniz&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

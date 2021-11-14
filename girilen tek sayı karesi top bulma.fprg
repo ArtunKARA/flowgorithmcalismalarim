@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-21 06:15:47 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjE7MDU6NDY6MjQgw5ZTOzMwMDM="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjE7MDY6MTU6NDcgw5ZTOzI7MzExNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="say&#305;, toplam, saya&#231;" type="Integer" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <assign variable="saya&#231;" expression="0"/>
+            <output expression="&quot;say&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;"/>
+            <while expression="say&#305;!=0">
+                <if expression="(say&#305;%2)==0">
+                    <then>
+                        <output expression="&quot;istenilen nitelikte say&#305; girmediniz tek say&#305; giriniz&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="toplam" expression="say&#305;^2+toplam"/>
+                        <assign variable="saya&#231;" expression="saya&#231;+1"/>
+                        <output expression="&quot;say&#305; giriniz&quot;" newline="True"/>
+                    </else>
+                </if>
+                <input variable="say&#305;"/>
+            </while>
+            <output expression="saya&#231;&amp;&quot; adet tek say&#305;n&#305;n kareleri toplam&#305; &quot;&amp;toplam" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

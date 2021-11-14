@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-26 02:37:22 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjY7MDI6MjU6MzQgw5ZTOzMwMDM="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjY7MDI6Mzc6MjIgw5ZTOzE7MzExMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="say&#305; b&#246;lenleri toplam&#305; say&#305;daqnb b&#252;y&#252;k ise bol say&#305;d&#305;r&#13;&#10;"/>
+            <declare name="say&#305;, i, toplam" type="Integer" array="False" size=""/>
+            <output expression="&quot;tam say&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;"/>
+            <assign variable="toplam" expression="0"/>
+            <for variable="i" start="1" end="say&#305;-1" direction="inc" step="1">
+                <if expression="say&#305;%i==0">
+                    <then>
+                        <assign variable="toplam" expression="toplam+i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="toplam&lt;say&#305;">
+                <then>
+                    <output expression="&quot;say&#305; bol say&#305; degildir&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;say&#305; bol say&#305;d&#305;r&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

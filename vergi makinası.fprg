@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-06 01:27:52 &#214;&#214;"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDE7MDc6MjI6NTYgw5ZTOzMwMDI="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDY7MDE6Mjc6NTIgw5bDljs3OzMyNDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Klavyeden girilen fiyat&#305;, KDV(%18) ekleyerek ekrana yazd&#305;r&#305;n.min"/>
+            <comment text="Klavyeden girilen fiyat&#305;, se&#231;ilen vergiyi ekleyerk belirtin ekleyerek ekrana yazd&#305;r&#305;n."/>
+            <declare name="a, tutar, b, vergit&#252;r&#252;, vergi1, vergi2, vergi3, tek" type="Integer" array="False" size=""/>
+            <declare name="&#246;denecekvergi, vergisiz, vergili" type="Real" array="False" size=""/>
+            <output expression="&quot;Vergi hesaplama makinas&#305;na ho&#351; geldiniz.&quot;" newline="True"/>
+            <output expression="&quot;Girilecek fiyata kdv dahil mi?&#13;&#10;1=Evet 2=Hay&#305;r&quot;" newline="True"/>
+            <input variable="a"/>
+            <if expression="a=1">
+                <then>
+                    <output expression="&quot;Hesaplanmas&#305; isten tutar&#305; giriniz.&quot;" newline="True"/>
+                    <input variable="tutar"/>
+                    <output expression="&quot;Tevkifat var m&#305;?&#13;&#10;1=Evet 2=Hay&#305;r&quot;" newline="True"/>
+                    <input variable="b"/>
+                    <if expression="b=1">
+                        <then>
+                            <output expression="&quot;Hesaplan&#305;lacak vergi hangi t&#252;r &#252;r&#252;nlte giriyor?&#13;&#10;A&#351;a&#287;&#305;da belirtilen vergi t&#252;r&#252;n&#252;n kodunu giriniz&quot;" newline="True"/>
+                            <output expression="&quot;Y&#252;zde (%)1 KDV Uygulanan &#220;r&#252;nler=1&#13;&#10;Y&#252;zde (%)8 KDV Uygulanan &#220;r&#252;nler=2&#13;&#10;Y&#252;zde (%)18 KDV Uygulanan &#220;r&#252;nler=3&quot;" newline="True"/>
+                            <input variable="vergit&#252;r&#252;"/>
+                            <output expression="&quot;Tevkifat on '10' &#252;zerinden oran&#305;n&#305;z ka&#231;t&#305;r&quot;" newline="True"/>
+                            <input variable="tek"/>
+                            <if expression="vergit&#252;r&#252;=1">
+                                <then>
+                                    <assign variable="&#246;denecekvergi" expression="(tutar/100)*(1/10*(10-tek))"/>
+                                    <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                    <assign variable="vergisiz" expression="(tutar/100)*(100-(1/10*(10-tek)))"/>
+                                    <output expression="vergisiz&amp;&quot;tl vergisiz fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="vergit&#252;r&#252;=2">
+                                        <then>
+                                            <assign variable="&#246;denecekvergi" expression="(tutar/100)*(8/10*(10-tek))"/>
+                                            <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                            <assign variable="vergisiz" expression="(tutar/100)*(100-(8/10*(10-tek)))"/>
+                                            <output expression="vergisiz&amp;&quot;tl vergisiz fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="&#246;denecekvergi" expression="(tutar/100)*(18/10*(10-tek))"/>
+                                            <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                            <assign variable="vergisiz" expression="(tutar/100)*(100-(18/10*(10-tek)))"/>
+                                            <output expression="vergisiz&amp;&quot;tl vergisiz fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Hesaplan&#305;lacak vergi hangi t&#252;r &#252;r&#252;nlte giriyor?&#13;&#10;A&#351;a&#287;&#305;da belirtilen vergi t&#252;r&#252;n&#252;n kodunu giriniz&quot;" newline="True"/>
+                            <output expression="&quot;Y&#252;zde (%)1 KDV Uygulanan &#220;r&#252;nler=1&#13;&#10;Y&#252;zde (%)8 KDV Uygulanan &#220;r&#252;nler=2&#13;&#10;Y&#252;zde (%)18 KDV Uygulanan &#220;r&#252;nler=3&quot;" newline="True"/>
+                            <input variable="vergit&#252;r&#252;"/>
+                            <if expression="vergit&#252;r&#252;=1">
+                                <then>
+                                    <assign variable="&#246;denecekvergi" expression="(tutar/100)*1"/>
+                                    <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                    <assign variable="vergisiz" expression="(tutar/100)*(100-1)"/>
+                                    <output expression="vergisiz&amp;&quot;tl vergisiz fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="vergit&#252;r&#252;=2">
+                                        <then>
+                                            <assign variable="&#246;denecekvergi" expression="(tutar/100)*8"/>
+                                            <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                            <assign variable="vergisiz" expression="(tutar/100)*(100-8)"/>
+                                            <output expression="vergisiz&amp;&quot;tl vergisiz fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="&#246;denecekvergi" expression="(tutar/100)*18"/>
+                                            <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                            <assign variable="vergisiz" expression="(tutar/100)*(100-18)"/>
+                                            <output expression="vergisiz&amp;&quot;tl vergisiz fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Hesaplanmas&#305; isten tutar&#305; giriniz.&quot;" newline="True"/>
+                    <input variable="tutar"/>
+                    <output expression="&quot;Tevkifat var m&#305;?&#13;&#10;1=Evet 2=Hay&#305;r&quot;" newline="True"/>
+                    <input variable="b"/>
+                    <if expression="b=1">
+                        <then>
+                            <output expression="&quot;Hesaplan&#305;lacak vergi hangi t&#252;r &#252;r&#252;nlte giriyor?&#13;&#10;A&#351;a&#287;&#305;da belirtilen vergi t&#252;r&#252;n&#252;n kodunu giriniz&quot;" newline="True"/>
+                            <output expression="&quot;Y&#252;zde (%)1 KDV Uygulanan &#220;r&#252;nler=1&#13;&#10;Y&#252;zde (%)8 KDV Uygulanan &#220;r&#252;nler=2&#13;&#10;Y&#252;zde (%)18 KDV Uygulanan &#220;r&#252;nler=3&quot;" newline="True"/>
+                            <input variable="vergit&#252;r&#252;"/>
+                            <output expression="&quot;Tevkifat on '10' &#252;zerinden oran&#305;n&#305;z ka&#231;t&#305;r&quot;" newline="True"/>
+                            <input variable="tek"/>
+                            <if expression="vergit&#252;r&#252;=1">
+                                <then>
+                                    <assign variable="&#246;denecekvergi" expression="(tutar/100)*(1/10*(10-tek))"/>
+                                    <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                    <assign variable="vergili" expression="(tutar/100)*(100+(1/10*(10-tek)))"/>
+                                    <output expression="vergili&amp;&quot;tl vergili fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="vergit&#252;r&#252;=2">
+                                        <then>
+                                            <assign variable="&#246;denecekvergi" expression="(tutar/100)*(8/10*(10-tek))"/>
+                                            <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                            <assign variable="vergili" expression="(tutar/100)*(100+(8/10*(10-tek)))"/>
+                                            <output expression="vergili&amp;&quot;tl vergili fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="&#246;denecekvergi" expression="(tutar/100)*(18/10*(10-tek))"/>
+                                            <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                            <assign variable="vergili" expression="(tutar/100)*(100+(18/10*(10-tek)))"/>
+                                            <output expression="vergili&amp;&quot;tl vergili fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Hesaplan&#305;lacak vergi hangi t&#252;r &#252;r&#252;nlte giriyor?&#13;&#10;A&#351;a&#287;&#305;da belirtilen vergi t&#252;r&#252;n&#252;n kodunu giriniz&quot;" newline="True"/>
+                            <output expression="&quot;Y&#252;zde (%)1 KDV Uygulanan &#220;r&#252;nler=1&#13;&#10;Y&#252;zde (%)8 KDV Uygulanan &#220;r&#252;nler=2&#13;&#10;Y&#252;zde (%)18 KDV Uygulanan &#220;r&#252;nler=3&quot;" newline="True"/>
+                            <input variable="vergit&#252;r&#252;"/>
+                            <if expression="vergit&#252;r&#252;=1">
+                                <then>
+                                    <assign variable="&#246;denecekvergi" expression="(tutar/100)*1"/>
+                                    <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                    <assign variable="vergili" expression="(tutar/100)*101"/>
+                                    <output expression="vergili&amp;&quot;tl vergili fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="vergit&#252;r&#252;=2">
+                                        <then>
+                                            <assign variable="&#246;denecekvergi" expression="(tutar/100)*8"/>
+                                            <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                            <assign variable="vergili" expression="(tutar/100)*108"/>
+                                            <output expression="vergili&amp;&quot;tl vergili fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="&#246;denecekvergi" expression="(tutar/100)*18"/>
+                                            <output expression="&#246;denecekvergi&amp;&quot;tl vergi &#246;denecektir&quot;" newline="True"/>
+                                            <assign variable="vergili" expression="(tutar/100)*118"/>
+                                            <output expression="vergili&amp;&quot;tl vergili fiyat&#305; vard&#305;r&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-23 12:56:16 &#214;&#214;"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjM7MTI6MTg6NDkgw5bDljszMTQw"/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjM7MTI6NTY6MTYgw5bDljszOzMyNDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, saya&#231;, b, d, i&#351;, i&#351;2, top, k, t" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="999" direction="inc" step="1">
+                <comment text="saya&#231;=len(tointeger(i))"/>
+                <assign variable="saya&#231;" expression="0"/>
+                <assign variable="top" expression="0"/>
+                <assign variable="i&#351;" expression="i"/>
+                <do expression="i&#351;!=0">
+                    <assign variable="i&#351;" expression="i&#351;/10"/>
+                    <assign variable="saya&#231;" expression="saya&#231;+1"/>
+                </do>
+                <assign variable="i&#351;2" expression="i"/>
+                <for variable="d" start="1" end="saya&#231;" direction="inc" step="1">
+                    <assign variable="top" expression="top+(i&#351;2%10)^3"/>
+                    <assign variable="i&#351;2" expression="i&#351;2/10"/>
+                </for>
+                <if expression="i=top">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-02 01:10:49 &#214;&#214;"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMDktMjg7MDY6MzE6Mzkgw5ZTOzMwMTk="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDI7MDE6MTA6NDkgw5bDljs2OzMyNDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Hocaya sitring komutlar&#305; ile kumut veme k&#305;s&#305;m&#305;n&#305; sor bknz. b&#252;t s&#305;nav&#305;n&#305;z varm&#305;"/>
+            <declare name="vize, final, b&#252;t, muafiyet" type="Integer" array="False" size=""/>
+            <declare name="y, n" type="String" array="False" size=""/>
+            <output expression="&quot;Dersten ge&#231;ip ge&#231;meme durumunu sorgulamak i&#231;in l&#252;tfen vize,final ve b&#252;t&#252;nleme notlar&#305;n&#305;z&#305; giriniz. &quot;" newline="True"/>
+            <output expression="&quot;Vize notunuz&quot;" newline="True"/>
+            <input variable="vize"/>
+            <output expression="&quot;Final notunuz&quot;" newline="True"/>
+            <input variable="final"/>
+            <output expression="&quot;B&#252;t&#252;nleme s&#305;nav&#305;n&#305;z varm&#305;? EVET=1 HAYIR=0.&quot;" newline="True"/>
+            <input variable="muafiyet"/>
+            <if expression="muafiyet=0">
+                <then>
+                    <declare name="a&#287;&#305;r1m, a&#287;&#305;r2m, msonu&#231;, ge&#231;ernotm" type="Integer" array="False" size=""/>
+                    <output expression="&quot;final s&#305;nav&#305;n&#305;n a&#287;&#305;rl&#305;k oran&#305;n&#305; giriniz&quot;" newline="True"/>
+                    <input variable="a&#287;&#305;r2m"/>
+                    <assign variable="msonu&#231;" expression="((vize*(100-a&#287;&#305;r2m))+final*a&#287;&#305;r2m)/100"/>
+                    <output expression="&quot;Ge&#231;er not nedir?&quot;" newline="True"/>
+                    <input variable="ge&#231;ernotm"/>
+                    <if expression="msonu&#231;&gt;ge&#231;ernotm">
+                        <then>
+                            <output expression="msonu&#231;&amp;&quot; ortalamas&#305; ile ge&#231;er&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="msonu&#231;&amp;&quot; ortalamas&#305; ile kal&#305;r&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <declare name="a&#287;&#305;r1, a&#287;&#305;r2, a&#287;&#305;r3, sonu&#231;, ge&#231;ernot" type="Integer" array="False" size=""/>
+                    <output expression="&quot;B&#252;t puan&#305;n&#305;z ?&quot;" newline="True"/>
+                    <input variable="b&#252;t"/>
+                    <output expression="&quot;final s&#305;nav&#305;n&#305;n a&#287;&#305;rl&#305;k oran&#305;n&#305; giriniz&quot;" newline="True"/>
+                    <input variable="a&#287;&#305;r2"/>
+                    <output expression="&quot;B&#252;t s&#305;nav&#305;n&#305;n a&#287;&#305;rl&#305;k oran&#305;n&#305; giriniz&quot;" newline="True"/>
+                    <input variable="a&#287;&#305;r3"/>
+                    <assign variable="sonu&#231;" expression="((vize*(100-a&#287;&#305;r2-a&#287;&#305;r3))+final*a&#287;&#305;r2+b&#252;t*a&#287;&#305;r3)/100"/>
+                    <output expression="&quot;Ge&#231;er not nedir?&quot;" newline="True"/>
+                    <input variable="ge&#231;ernot"/>
+                    <if expression="sonu&#231;&gt;ge&#231;ernot">
+                        <then>
+                            <output expression="sonu&#231;&amp;&quot; ortalamas&#305; ile ge&#231;er&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="sonu&#231;&amp;&quot; ortalamas&#305; ile kal&#305;r&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

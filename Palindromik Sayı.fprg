@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-04 04:04:21 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMDQ7MDI6MDg6MTIgw5ZTOzI5OTc="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMDQ7MDQ6MDQ6MjEgw5ZTOzI7MzEwNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, say&#305;, i&#351;say&#305;, k, say&#305;k" type="Integer" array="False" size=""/>
+            <do expression="len(tostring(say&#305;))!=5">
+                <output expression="&quot;5 basamakl&#305; say&#305; giriniz&quot;" newline="True"/>
+                <input variable="say&#305;"/>
+            </do>
+            <assign variable="say&#305;k" expression="say&#305;"/>
+            <assign variable="i&#351;say&#305;" expression="0"/>
+            <do expression="say&#305;k!=0">
+                <assign variable="k" expression="say&#305;k%10"/>
+                <assign variable="i&#351;say&#305;" expression="i&#351;say&#305;*10+k"/>
+                <assign variable="say&#305;k" expression="say&#305;k/10"/>
+            </do>
+            <if expression="i&#351;say&#305;=say&#305;">
+                <then>
+                    <output expression="say&#305;&amp;&quot; Palindromik Say&#305;d&#305;r&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="say&#305;&amp;&quot; Palindromik Say&#305; De&#287;illdir&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

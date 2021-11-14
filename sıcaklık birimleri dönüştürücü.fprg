@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-06 01:27:30 &#214;&#214;"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDU7MTA6MjU6NDkgw5ZTOzMwMDU="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDU7MTA6MjY6MDQgw5ZTOzE7YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDM7MTE6NDY6MTYgw5ZTOzFCLWZhaHJlbmF5dCBjZWxjaXVzIGtlbHZpbiBkw7ZuxZ90w7xyw7xjw7wuZnByZzsxMTIwNA=="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDY7MDE6Mjc6MzAgw5bDljs3OzMyNDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="- Klavyeden girilen Fahrenayt derecesini Cantigrad&#8217;a &#231;eviren program&#305;n ak&#305;&#351;&#13;&#10;&#351;emas&#305;n&#305; &#231;izin.min&#13;&#10;"/>
+            <comment text="fahrenayt celcius kelvin d&#246;n&#351;t&#252;r&#252;c&#252;"/>
+            <declare name="input, output, ivariable, ovariable" type="Real" array="False" size=""/>
+            <output expression="&quot;&#199;evirilecek de&#287;er t&#252;r&#252;n&#252; giriniz. 1=Kelvin 2=Fahrenayt 3=Cantigrad&quot;" newline="True"/>
+            <input variable="input"/>
+            <output expression="&quot;&#199;evirilecek de&#287;eri girin&quot;" newline="True"/>
+            <input variable="ivariable"/>
+            <output expression="&quot;D&#246;n&#252;&#351;ecek de&#287;er t&#252;r&#252;n&#252; giriniz. 1=Kelvin 2=Fahrenayt 3=Cantigrad&quot;" newline="True"/>
+            <input variable="output"/>
+            <if expression="input=output">
+                <then>
+                    <output expression="ivariable" newline="True"/>
+                </then>
+                <else>
+                    <if expression="input=2">
+                        <then>
+                            <assign variable="ivariable" expression="ivariable*5/9-32"/>
+                            <if expression="output=3">
+                                <then>
+                                    <output expression="ivariable" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="ivariable" expression="273+ivariable"/>
+                                    <output expression="ivariable&amp;&quot;K&#176;&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="input=1">
+                                <then>
+                                    <if expression="output=2">
+                                        <then>
+                                            <assign variable="ivariable" expression="ivariable*9/5-459"/>
+                                            <output expression="ivariable" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="ivariable" expression="ivariable-273"/>
+                                            <output expression="ivariable" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="output=2">
+                                        <then>
+                                            <assign variable="ivariable" expression="ivariable*9/5+32"/>
+                                            <output expression="ivariable" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="ivariable" expression="ivariable+273"/>
+                                            <output expression="ivariable" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

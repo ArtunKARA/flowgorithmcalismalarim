@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-05 10:43:53 &#214;&#214;"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMDQ7MTA6NTg6MTkgw5ZTOzMwMDg="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMDU7MTI6MzA6MjMgw5bDljsyO2FydHVuO0RFU0tUT1AtSjdJMkQxUzsyMDIxLTEwLTI4OzAzOjE4OjU3IMOWUzsyLmRlcmNlZGVuIGRlbmtsZW0ga8O2ayBidWx1Y3UuZnByZzs5NzE0"/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMDU7MTA6NDM6NTMgw5bDljs4OzMyNDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&quot;&#220;&#199;GEN SAYI: 1'den n'ye kadar ard&#305;&#351;&#305;k do&#287;al say&#305;lar&#305;n toplam&#305;n&#305; veren say&#305;lara &#220;&#231;gen Say&#305;lar denir.&quot;"/>
+            <declare name="yol" type="Integer" array="False" size=""/>
+            <output expression="&quot;1. yol 2. yol&quot;" newline="True"/>
+            <input variable="yol"/>
+            <if expression="yol=1">
+                <then>
+                    <call expression="yol1"/>
+                </then>
+                <else>
+                    <call expression="yol2"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="yol1" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="say&#305;, bassay&#305;, &#252;&#231;genselsay&#305;" type="Integer" array="False" size=""/>
+            <output expression="&quot;say&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;"/>
+            <assign variable="bassay&#305;" expression="0"/>
+            <assign variable="&#252;&#231;genselsay&#305;" expression="0"/>
+            <while expression="say&#305;&gt;&#252;&#231;genselsay&#305;">
+                <assign variable="bassay&#305;" expression="bassay&#305;+1"/>
+                <assign variable="&#252;&#231;genselsay&#305;" expression="&#252;&#231;genselsay&#305;+bassay&#305;"/>
+            </while>
+            <if expression="say&#305;=&#252;&#231;genselsay&#305;">
+                <then>
+                    <output expression="&quot;&#220;&#231;gen Say&#305;d&#305;r&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;&#220;&#231;gen Say&#305; De&#287;ildir&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="yol2" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="say&#305;, kok1, kok2, delta" type="Real" array="False" size=""/>
+            <output expression="&quot;say&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;"/>
+            <assign variable="delta" expression="1^2-4*1*(-say&#305;*2)"/>
+            <assign variable="kok1" expression="(-1+(delta^0.5))/2*1"/>
+            <if expression="(kok1%1)=0">
+                <then>
+                    <output expression="&quot;&#220;&#231;gen Say&#305;d&#305;r&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;say&#305; &#252;&#231;gensel de&#287;ildir&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

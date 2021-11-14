@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-28 01:02:28 &#214;&#214;"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MTI6MDg6MDAgw5bDljszMTMx"/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDE6MDI6Mjggw5bDljsxOzMyNDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, y, x, t" type="Integer" array="False" size=""/>
+            <declare name="say&#305;" type="Integer" array="True" size="50"/>
+            <for variable="i" start="0" end="49" direction="inc" step="1">
+                <assign variable="say&#305;[i]" expression="Random(100)+1"/>
+            </for>
+            <for variable="x" start="0" end="49" direction="inc" step="1">
+                <for variable="y" start="x" end="49" direction="inc" step="1">
+                    <if expression="say&#305;[x]&lt;say&#305;[y]">
+                        <then>
+                            <assign variable="t" expression="say&#305;[x]"/>
+                            <assign variable="say&#305;[x]" expression="say&#305;[y]"/>
+                            <assign variable="say&#305;[y]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="49" direction="inc" step="1">
+                <output expression="say&#305;[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

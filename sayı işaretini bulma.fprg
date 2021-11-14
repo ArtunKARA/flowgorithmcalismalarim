@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 02:26:10 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMDktMjk7MDc6MTg6MTQgw5ZTOzMwMTk="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDc7MDI6MjY6MTAgw5ZTOzM7MzEwNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Verilen tamsay&#305;n&#305;n s&#305;f&#305;r, pozitif ya da negatif olup olmad&#305;&#287;&#305;n&#305; bulan algoritma ve ak&#305;&#351; diyagram&#305;n&#305; tasarlay&#305;n&#305;z."/>
+            <declare name="say&#305;, sorgu" type="Integer" array="False" size=""/>
+            <call expression="i&#351;aret"/>
+            <output expression="&quot;Sorguya devam etmek istiyorsan&#305;z l&#252;tfen 1 e bas&#305;n&#305;z&quot;" newline="True"/>
+            <input variable="sorgu"/>
+            <while expression="sorgu=1">
+                <call expression="i&#351;aret "/>
+                <output expression="&quot;Sorguya devam etmek istiyorsan&#305;z l&#252;tfen 1 e bas&#305;n&#305;z&quot;" newline="True"/>
+                <input variable="sorgu"/>
+            </while>
+            <output expression="&quot;Program sonland&#305;r&#305;ld&#305;&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="i&#351;aret" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="say&#305;" type="Integer" array="False" size=""/>
+            <output expression="&quot;Say&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;"/>
+            <if expression="say&#305;&gt;0">
+                <then>
+                    <output expression="&quot;say&#305; pozitif &quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="say&#305;&lt;0">
+                        <then>
+                            <output expression="&quot;Say&#305; negatif&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;say&#305; notr yani s&#305;f&#305;r&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

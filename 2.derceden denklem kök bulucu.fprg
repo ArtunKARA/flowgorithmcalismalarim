@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-28 03:54:07 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDM6MTg6NTcgw5ZTOzMwMTM="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDM6NTQ6MDcgw5ZTOzE7MzExNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="ax^2+bx+c &#351;eklinde denklemin k&#246;klerini hesaplayan algoritma!! (Delta hesab&#305; b^2-4ac)"/>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <declare name="delta" type="Real" array="False" size=""/>
+            <output expression="&quot;ax^2+bx+c denkleminde a de&#287;erini giriniz&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;ax^2+bx+c denkleminde b de&#287;erini giriniz&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;ax^2+bx+c denkleminde c de&#287;erini giriniz&quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="delta" expression="b^2-4*a*c"/>
+            <if expression="delta=0">
+                <then>
+                    <output expression="(-b+(delta^0.5))/2*a" newline="True"/>
+                </then>
+                <else>
+                    <if expression="delta&gt;0">
+                        <then>
+                            <output expression="(-b+(delta^0.5))/2*a" newline="True"/>
+                            <output expression="(-b-(delta^0.5))/2*a" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;k&#246;k&#252; yoktur&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

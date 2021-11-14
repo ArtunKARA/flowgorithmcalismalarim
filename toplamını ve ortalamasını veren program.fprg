@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-03 12:35:44 &#214;&#214;"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDI7MTA6MTU6MDAgw5ZTOzI5ODg="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDM7MTI6MzU6NDQgw5bDljs0OzMyNDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="s&#305;ral&#305; yada girilen say&#305;lar&#305;n ortlamas&#305;"/>
+            <comment text="- Be&#351; say&#305;n&#305;n toplam&#305;n&#305; ve ortalamas&#305;n&#305; veren programa ait algoritmay&#305; olu&#351;turunuz.min"/>
+            <declare name="&#231;, ba&#351;, art, d&#246;n, ad, saya&#231;, top, ort, say" type="Real" array="False" size=""/>
+            <output expression="&quot;Belirlenmi&#351; dizinin ortalams&#305;n&#305; bulmak i&#231;in (recruitment) 1 i&#13;&#10; Girilen say&#305;lar&#305;n ortlamas&#305; i&#231;in 2 yi tu&#351;lay&#305;n&#305;z&quot;" newline="True"/>
+            <input variable="&#231;"/>
+            <if expression="&#231;=1">
+                <then>
+                    <output expression="&quot;Ba&#351;lang&#305;&#231; say&#305;s&#305;n&#305; giriniz&quot;" newline="True"/>
+                    <input variable="ba&#351;"/>
+                    <output expression="&quot;Say&#305; dizinin art&#305;&#351; miktar&#305;n&#305; girin&quot;" newline="True"/>
+                    <input variable="art"/>
+                    <output expression="&quot;Ka&#231; say&#305; toplanacak&quot;" newline="True"/>
+                    <input variable="ad"/>
+                    <assign variable="saya&#231;" expression="0"/>
+                    <assign variable="top" expression="0"/>
+                    <while expression="ad&gt;saya&#231;">
+                        <assign variable="ba&#351;" expression="ba&#351;+art"/>
+                        <assign variable="top" expression="ba&#351;+top"/>
+                        <assign variable="saya&#231;" expression="saya&#231;+1"/>
+                    </while>
+                    <assign variable="top" expression="top-(art*ad)"/>
+                    <assign variable="ort" expression="top/ad"/>
+                    <output expression="ort&amp;&quot; say&#305;lar&#305;n ortlams&#305;&quot;" newline="True"/>
+                    <output expression="top&amp;&quot; say&#305;lar&#305;n toplam&#305;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Ka&#231; adet say&#305; toplamak istiyorsunuz&quot;" newline="True"/>
+                    <input variable="ad"/>
+                    <assign variable="saya&#231;" expression="0"/>
+                    <assign variable="top" expression="0"/>
+                    <while expression="saya&#231;&lt;ad">
+                        <output expression="&quot;Say&#305; giriniz&quot;" newline="True"/>
+                        <input variable="say"/>
+                        <assign variable="top" expression="top+say"/>
+                        <assign variable="saya&#231;" expression="saya&#231;+1"/>
+                    </while>
+                    <assign variable="ort" expression="top/ad"/>
+                    <output expression="ort&amp;&quot; say&#305;lar&#305;n ortlams&#305;&quot;" newline="True"/>
+                    <output expression="top&amp;&quot; say&#305;lar&#305;n toplam&#305;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

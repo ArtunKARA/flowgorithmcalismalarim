@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-28 04:49:58 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDQ6MTY6MTAgw5ZTOzMwMDE="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDQ6MTc6NDQgw5ZTOzE7YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMTQ7MDI6MDI6MTYgw5ZTO3NhecSxIHRhaG1pbi5mcHJnOzgwMTg="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDQ6NDk6NTggw5ZTOzE7MzEyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="&#252;say&#305;, gsay&#305;, saya&#231;" type="Integer" array="False" size=""/>
+            <declare name="durum" type="Boolean" array="False" size=""/>
+            <assign variable="saya&#231;" expression="10"/>
+            <assign variable="&#252;say&#305;" expression="random(99)+1"/>
+            <do expression="(durum!=True)&amp;&amp;(saya&#231;&gt;0)">
+                <output expression="saya&#231;&amp;&quot; adet tahmin hak&#305;n&#305;z var l&#252;tfen &#252;retilen say&#305;y&#305; tahmin ediniz&quot;" newline="True"/>
+                <input variable="gsay&#305;"/>
+                <assign variable="durum" expression="sayiTahmin(gsay&#305;,&#252;say&#305;)"/>
+                <assign variable="saya&#231;" expression="saya&#231;-1"/>
+            </do>
+            <if expression="saya&#231;=0">
+                <then>
+                    <output expression="&quot;tahmin hak&#305;n&#305;z bitmi&#351;tir&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="10-saya&#231;&amp;&quot;adet tahminde sonuca ula&#351;t&#305;n&#305;z&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="sayiTahmin" type="Boolean" variable="durum">
+        <parameters>
+            <parameter name="gsay&#305;" type="Integer" array="False"/>
+            <parameter name="&#252;say&#305;" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="durum" type="Boolean" array="False" size=""/>
+            <if expression="&#252;say&#305;=gsay&#305;">
+                <then>
+                    <assign variable="durum" expression="true"/>
+                </then>
+                <else>
+                    <if expression="&#252;say&#305;&lt;gsay&#305;">
+                        <then>
+                            <output expression="&quot;girilen say&#305; &#252;retilenden b&#252;y&#252;k&quot;" newline="True"/>
+                            <assign variable="durum" expression="false"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;girilen say&#305; &#252;retilenden k&#252;&#231;&#252;k&quot;" newline="True"/>
+                            <assign variable="durum" expression="false"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

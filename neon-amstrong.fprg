@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-11 09:53:48 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMTE7MDI6MjY6NTcgw5ZTOzMwMDQ="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMTE7MDI6NTM6NDIgw5ZTOzM7YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMDQ7MDI6MDg6MTIgw5ZTO1BhbGluZHJvbWlrIFNhecSxLmZwcmc7ODQ4NA=="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMTE7MDk6NTM6NDggw5ZTOzU7MzEyMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="se&#231;im, say&#305;" type="Integer" array="False" size=""/>
+            <declare name="sonu&#231;" type="String" array="False" size=""/>
+            <do expression="say&#305;&lt;0">
+                <output expression="&quot;L&#252;tfen pozitif tam say&#305; giriniz&quot;" newline="True"/>
+                <input variable="say&#305;"/>
+            </do>
+            <do expression="se&#231;im&gt;2">
+                <output expression="&quot;1) ARMSTRONG say&#305; kontrol&#252;&#13;&#10;2) NEON say&#305; kontrol&#252;&#13;&#10;0) &#199;IKI&#350;&quot;" newline="True"/>
+                <input variable="se&#231;im"/>
+            </do>
+            <if expression="se&#231;im=0">
+                <then>
+                    <assign variable="sonu&#231;" expression="&quot;Program i&#351;lem yap&#305;lmadan sonland&#305;r&#305;lm&#305;&#351;t&#305;r&quot;"/>
+                </then>
+                <else>
+                    <if expression="se&#231;im=1">
+                        <then>
+                            <assign variable="sonu&#231;" expression="armstrong(say&#305;)"/>
+                        </then>
+                        <else>
+                            <assign variable="sonu&#231;" expression="neon(say&#305;)"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="sonu&#231;" newline="True"/>
+        </body>
+    </function>
+    <function name="armstrong" type="String" variable="sonu&#231;">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sonu&#231;" type="String" array="False" size=""/>
+            <declare name="&#252;say&#305;, k, i&#351;say&#305;" type="Integer" array="False" size=""/>
+            <assign variable="&#252;say&#305;" expression="0"/>
+            <assign variable="i&#351;say&#305;" expression="a"/>
+            <do expression="i&#351;say&#305;!=0">
+                <assign variable="k" expression="i&#351;say&#305;%10"/>
+                <assign variable="&#252;say&#305;" expression="(k^len(tostring(a)))+&#252;say&#305;"/>
+                <assign variable="i&#351;say&#305;" expression="i&#351;say&#305;/10"/>
+            </do>
+            <if expression="&#252;say&#305;=a">
+                <then>
+                    <assign variable="sonu&#231;" expression="&quot;say&#305; armstrong say&#305;d&#305;r&quot;"/>
+                </then>
+                <else>
+                    <assign variable="sonu&#231;" expression="&quot;say&#305; armstrong say&#305; de&#287;ildir&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="neon" type="String" variable="sonu&#231;">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="&#252;say&#305;, k, i&#351;say&#305;" type="Integer" array="False" size=""/>
+            <declare name="sonu&#231;" type="String" array="False" size=""/>
+            <assign variable="i&#351;say&#305;" expression="a"/>
+            <assign variable="&#252;say&#305;" expression="0"/>
+            <do expression="i&#351;say&#305;!=0">
+                <assign variable="k" expression="i&#351;say&#305;%10"/>
+                <assign variable="&#252;say&#305;" expression="k+&#252;say&#305;"/>
+                <assign variable="i&#351;say&#305;" expression="i&#351;say&#305;/10"/>
+            </do>
+            <if expression="a=(&#252;say&#305;^(len(tostring(a))))">
+                <then>
+                    <assign variable="sonu&#231;" expression="&quot;say&#305; bir neon say&#305;d&#305;r&quot;"/>
+                </then>
+                <else>
+                    <assign variable="sonu&#231;" expression="&quot;say&#305; bir neon say&#305; de&#287;ildir&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-29 07:46:02 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMDktMjk7MDc6MzY6MTcgw5ZTOzMwMjI="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMDktMjk7MDc6NDY6MDIgw5ZTOzE7MzEyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Ekrana belirtilen defa defa istenileni yazan algoritmay&#305; yap&#305;n&#305;z"/>
+            <declare name="tekrar, istek, a" type="Integer" array="False" size=""/>
+            <declare name="ad" type="String" array="False" size=""/>
+            <assign variable="a" expression="0"/>
+            <do expression="istek=1">
+                <output expression="&quot;ad&#305;n&#305;&quot;" newline="True"/>
+                <input variable="ad"/>
+                <output expression="&quot;ka&#231; tekrar&quot;" newline="True"/>
+                <input variable="tekrar"/>
+                <for variable="a" start="0" end="tekrar" direction="inc" step="1">
+                    <output expression="ad" newline="True"/>
+                </for>
+                <output expression="&quot;Devam etmek istiyormusunuz Evet=1 Hay&#305;r=0&quot;" newline="True"/>
+                <input variable="istek"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-07 02:18:38 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMDktMjg7MDY6MTk6MDYgw5ZTOzMwMTk="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDc7MDI6MTg6Mzggw5ZTOzI7MzExNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="say&#305;1, say&#305;2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Kar&#351;&#305;&#351;at&#305;rma i&#231;in l&#252;tfen say&#305; de&#287;erleri giriniz&quot;" newline="True"/>
+            <output expression="&quot;1.say&#305; y&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;1"/>
+            <output expression="&quot;2.say&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;2"/>
+            <if expression="say&#305;1=say&#305;2">
+                <then>
+                    <output expression="&quot;Girilen iki say&#305; birbirine e&#351;itir.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="say&#305;1&gt;say&#305;2">
+                        <then>
+                            <output expression="&quot;1. girdi&#287;iniz say&#305; daha b&#252;y&#252;k&quot;" newline="True"/>
+                            <output expression="say&#305;1&amp;&quot; daha b&#252;y&#252;k &quot;&amp;say&#305;2&amp;&quot; say&#305;s&#305;ndan&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;2.girdi&#287;iniz say&#305; daha b&#252;y&#252;k&quot;" newline="True"/>
+                            <output expression="say&#305;1&amp;&quot; daha k&#252;&#231;&#252;k &quot;&amp;say&#305;2&amp;&quot; say&#305;s&#305;ndan&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-05 10:14:52 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDU7MDg6NTA6NTIgw5ZTOzMwMDQ="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDU7MDk6MTE6MDEgw5ZTOzE7YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDU7MDg6Mzc6MjQgw5ZTO3NhecSxbsSxbiBhc2FsIG9sdXAgb2xtYWTEscSfxLFuxLEgdGVzIGV0bWUuZnByZzsxMTQ5MQ=="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDU7MTA6MTQ6NTIgw5ZTOzQ7MzEwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="beli bir aral&#305;ktaki say&#305;lar&#305;n asl olanlar&#305; bulma"/>
+            <declare name="start, finish, saya&#231;, sonu&#231;, par&#231;a, x, b&#246;l&#252;m" type="Integer" array="False" size=""/>
+            <assign variable="saya&#231;" expression="0"/>
+            <output expression="&quot;Ba&#351;lang&#305;&#231; say&#305;s&#305;n&#305; girin&quot;" newline="True"/>
+            <input variable="start"/>
+            <output expression="&quot;Biti&#351; say&#305;s&#305;n&#305; belirleyiniz&quot;" newline="True"/>
+            <input variable="finish"/>
+            <for variable="x" start="start" end="finish" direction="inc" step="1">
+                <if expression="x=1">
+                    <then/>
+                    <else>
+                        <for variable="b&#246;l&#252;m" start="2" end="x-1" direction="inc" step="1">
+                            <if expression="x%b&#246;l&#252;m=0">
+                                <then>
+                                    <assign variable="saya&#231;" expression="saya&#231;+1"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <if expression="saya&#231;&gt;0">
+                            <then/>
+                            <else>
+                                <output expression="x" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="saya&#231;" expression="0"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-26 02:42:52 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMDktMjY7MDE6NTM6Mjkgw5ZTOzMwMTU="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMDktMjY7MDI6NDI6NTIgw5ZTOzE7MzExOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Ad&#305;n ne?&quot;" newline="True"/>
+            <declare name="ad" type="String" array="False" size=""/>
+            <input variable="ad"/>
+            <output expression="&quot;merhaba &quot;&amp;ad" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

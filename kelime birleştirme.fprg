@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-04 03:09:31 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMDQ7MDI6MDc6MTEgw5ZTOzI5OTU="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTEtMDQ7MDM6MDk6MzEgw5ZTOzI7MzEwOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="String" array="False" size=""/>
+            <output expression="&quot;kelime giriniz&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;kelime giriniz&quot;" newline="True"/>
+            <input variable="b"/>
+            <assign variable="c" expression="birlestir(a,b)"/>
+            <output expression="c" newline="True"/>
+        </body>
+    </function>
+    <function name="birlestir" type="String" variable="c">
+        <parameters>
+            <parameter name="a" type="String" array="False"/>
+            <parameter name="b" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="c" type="String" array="False" size=""/>
+            <assign variable="c" expression="a&amp;b"/>
+        </body>
+    </function>
+</flowgorithm>

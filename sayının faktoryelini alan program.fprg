@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-05 01:22:19 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDM7MTI6MzY6MzQgw5bDljszMTMy"/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDU7MDE6MjI6MTkgw5ZTOzU7MzExMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text=" Klavyeden girilen say&#305; kadar (N) say&#305;n&#305;n faktoryelini alan program&#305;n ak&#305;&#351; &#351;emas&#305;."/>
+            <declare name="factorial, output, step, pro" type="Integer" array="False" size=""/>
+            <assign variable="step" expression="1"/>
+            <assign variable="output" expression="1"/>
+            <output expression="&quot;Fakt&#246;ryelin hesaplanmas&#305; istenen say&#305;y&#305; giriniz(Program en fazla 12! hesaplayabiliyor daha fazlas&#305; program&#305;n de&#287;i&#351;ken saklama kapasitesini a&#351;&#305;yor)&quot;" newline="True"/>
+            <input variable="factorial"/>
+            <if expression="factorial&lt;=12">
+                <then/>
+                <else>
+                    <do expression="factorial&gt;12">
+                        <output expression="&quot;Program&#305;n hesaplama kapesiteini a&#351;t&#305;n&#305;z l&#252;tfen 12 say&#305;s&#305; ve daha d&#252;&#351;&#252;k bir say&#305; giriniz.&quot;" newline="True"/>
+                        <input variable="factorial"/>
+                    </do>
+                </else>
+            </if>
+            <declare name="stepo, outputo" type="Integer" array="False" size=""/>
+            <assign variable="outputo" expression="1"/>
+            <for variable="stepo" start="1" end="factorial" direction="inc" step="1">
+                <assign variable="outputo" expression="outputo*stepo"/>
+            </for>
+            <output expression="outputo&amp;&quot; For&quot;" newline="True"/>
+            <while expression="factorial+1&gt;step">
+                <assign variable="output" expression="step*output"/>
+                <assign variable="step" expression="step+1"/>
+            </while>
+            <output expression="output&amp;&quot; While&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

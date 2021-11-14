@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-22 11:59:14 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjI7MTE6NTE6NTYgw5ZTOzMwMDI="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjI7MTE6NTk6MTQgw5ZTOzE7MzExMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="amstrong" type="Integer" array="False" size=""/>
+            <declare name="say&#305;" type="String" array="False" size=""/>
+            <output expression="&quot;say&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;"/>
+            <assign variable="amstrong" expression="tointeger(char(say&#305;,0))^3+tointeger(char(say&#305;,1))^3+tointeger(char(say&#305;,2))^3"/>
+            <if expression="amstrong=tointeger(say&#305;)">
+                <then>
+                    <output expression="&quot;say&#305; amstrong say&#305;d&#305;r&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;say&#305; amstrong say&#305; de&#287;ildir&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

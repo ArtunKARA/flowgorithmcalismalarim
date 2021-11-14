@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-05 09:13:42 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDU7MDg6Mzc6MjQgw5ZTOzMwMDg="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMDU7MDk6MTM6NDIgw5ZTOzI7MzExMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="asal say&#305; olup olams&#305; durunu bak&#13;&#10;"/>
+            <declare name="say&#305;, b&#246;l&#252;m, kalan, saya&#231;" type="Integer" array="False" size=""/>
+            <assign variable="saya&#231;" expression="0"/>
+            <output expression="&quot;Say&#305; giriniz&quot;" newline="True"/>
+            <input variable="say&#305;"/>
+            <for variable="b&#246;l&#252;m" start="2" end="say&#305;-1" direction="inc" step="1">
+                <if expression="say&#305;%b&#246;l&#252;m=0">
+                    <then>
+                        <assign variable="saya&#231;" expression="saya&#231;+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="saya&#231;&gt;0">
+                <then>
+                    <output expression="saya&#231;+2&amp;&quot; adet b&#246;leni vard&#305;r&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Say&#305; asald&#305;r&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

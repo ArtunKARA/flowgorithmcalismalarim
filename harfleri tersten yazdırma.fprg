@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="artun"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-28 08:13:27 &#214;S"/>
+        <attribute name="created" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDM6NTY6Mjkgw5ZTOzMwMTQ="/>
+        <attribute name="edited" value="YXJ0dW47REVTS1RPUC1KN0kyRDFTOzIwMjEtMTAtMjg7MDg6MTM6Mjcgw5ZTOzM7MzEyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Klavyeden &quot;!&quot; girilene kadar girilecek her harfi biriktiren sonunda biriktirilen kelimeyi tersten yazd&#305;ran algoritma."/>
+            <declare name="harf, kelime, son" type="String" array="False" size=""/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <assign variable="kelime" expression="&quot;&quot;"/>
+            <assign variable="son" expression="&quot;&quot;"/>
+            <assign variable="harf" expression="&quot;&quot;"/>
+            <do expression="harf!=&quot;!&quot;">
+                <do expression="len(harf)!=1">
+                    <if expression="len(harf)&gt;1">
+                        <then>
+                            <output expression="&quot; Girmi&#351; oldu&#287;unuz de&#287;er bir harf de&#287;ildir. L&#252;tfen harf giriniz&quot;" newline="True"/>
+                            <input variable="harf"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;harf giriniz&quot;" newline="True"/>
+                            <input variable="harf"/>
+                        </else>
+                    </if>
+                </do>
+                <assign variable="kelime" expression="harf&amp;kelime"/>
+            </do>
+            <for variable="x" start="1" end="len(kelime)-1" direction="inc" step="1">
+                <assign variable="son" expression="son&amp;char(kelime,x)"/>
+            </for>
+            <output expression="son" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
